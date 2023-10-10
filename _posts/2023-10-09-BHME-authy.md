@@ -131,23 +131,23 @@ To obtain the flag, my password needs to be less than 6 characters. However, dur
 ```go
 // registration
 if len(user.Password) < 6 {
-		log.Error("Password too short")
-		resp := c.JSON(http.StatusConflict, helper.ErrorLog(http.StatusConflict, "Password too short", "EXT_REF"))
-		return resp
-	}
+  log.Error("Password too short")
+  resp := c.JSON(http.StatusConflict, helper.ErrorLog(http.StatusConflict, "Password too short", "EXT_REF"))
+  return resp
+}
 
 // login
 password := []rune(user.Password)
-	result.Token = helper.JwtGenerator(result.Username, result.Firstname, result.Lastname, os.Getenv("SECRET"))
-	if len(password) < 6 {
-		flag := os.Getenv("FLAG")
-		res := &Flag{
-			Flag: flag,
-		}
-		resp := c.JSON(http.StatusOK, res)
-		log.Info()
-		return resp
-	}
+result.Token = helper.JwtGenerator(result.Username, result.Firstname, result.Lastname, os.Getenv("SECRET"))
+if len(password) < 6 {
+  flag := os.Getenv("FLAG")
+  res := &Flag{
+    Flag: flag,
+  }
+  resp := c.JSON(http.StatusOK, res)
+  log.Info()
+  return resp
+}
 ```
 You can find information about rune online. In simple terms, rune is used to handle Unicode characters properly. For instance, the character 'A' consists of 1 byte, whereas a single Chinese character consists of 2 bytes. If Go directly compares a password containing a Chinese character, it might consider it as 2 characters. However, using rune(), it treats it as a single character. This implies that if we use a 3 Chinese character password, it will meet both the registration and login flag criteria.
 ![registration](https://i.imgur.com/UO75C6g.png)
