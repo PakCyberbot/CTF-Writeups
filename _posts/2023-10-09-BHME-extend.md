@@ -106,6 +106,6 @@ Now, after deobfuscating the connect function, I obtained a WebSocket URL.
 wss://Qf2MjYwAzNyIDOjVTZkJTY---1QjY0YGNxEDM1cTMxQ2YjV---WYwIjYzMTM2sXWHFETGhkQ.oast.pro/
 ```
 Although my attempt to establish a connection with the WebSocket yielded no response, a more thorough examination of the URL jogged my memory about '**Qkh**' I noticed it was written in reverse. Subsequently, I reversed the base64-encoded text and decoded it, revealing the flag.
-![flag](blob:https://imgur.com/98468779-0d81-4e5d-8d20-7d29646a82f4) 
+![flag](https://i.imgur.com/4OhcY33.png) 
 > Show some support by following me on [Github](https://github.com/PakCyberbot)
 {: .prompt-tip }
