@@ -1,7 +1,7 @@
 ---
 title: Not supported (Forensics)
 author: pcb
-date: 2023-10-08 20:20:00 +0500
+date: 2023-10-09 20:20:00 +0500
 categories: [CTF Events, Blackhat MEA 2023]
 tags: [forensics]
 math: true

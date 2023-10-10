@@ -1,7 +1,7 @@
 ---
 title: Authy (Web)
 author: pcb
-date: 2023-10-08 20:00:00 +0500
+date: 2023-10-09 20:00:00 +0500
 categories: [CTF Events, Blackhat MEA 2023]
 tags: [web]
 math: true
